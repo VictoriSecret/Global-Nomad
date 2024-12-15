@@ -34,8 +34,8 @@ class Database:
             direction_id INTEGER PRIMARY KEY AUTOINCREMENT,
             name_direction TEXT NOT NULL,
             description TEXT NOT NULL,
-	        created_by INTEGER,
-	        FOREIGN KEY(created_by) REFERENCES administrator(id_admin)
+	    created_by INTEGER,
+	    FOREIGN KEY(created_by) REFERENCES administrator(id_admin)
         )''')
         cursor.execute('''CREATE TABLE IF NOT EXISTS packages (
             packages_id INTEGER PRIMARY KEY AUTOINCREMENT,
